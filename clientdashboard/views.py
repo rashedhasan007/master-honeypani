@@ -6,7 +6,6 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 
-from firebase import firebase
 
 def hello(request):
    text = """<h1>welcome to my app !</h1>"""
