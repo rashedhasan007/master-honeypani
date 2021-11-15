@@ -1,1 +1,1 @@
-web: gunicorn clientdashboard:wsgi
+web: gunicorn clientdashboard.wsgi
