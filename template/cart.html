@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <section>
+        <header class="header">
+            <a href="{% url 'index' %}" class="logo">Shop</a>
+            
+            
+            <div class="fas fa-bars"></div>
+            
+            
+            <nav class="navbar">
+              <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </nav>
+            <div class="H-SRH"><input type="search" placeholder="Search..."> <a href=""><i class="fas fa-search"></i></a><a href="{% url 'cart' %}"><i class="fas fa-shopping-cart"></i></a><img src="img/Clint.jpg" alt=""></div>
+            
+            </header>
+        <div class="C1">
+            <span>Cart</span>
+        </div>
+        <div class="C2">
+            <div class="c3">
+                <div class="sub-c1">
+                    <img src="{% static 'img/c1.png' %}" alt="">
+                </div>
+                <div class="sub-c2">
+                    <h1>Nashvalie Armchair</h1>
+                    <p>Quantity: 1 <br>Color: Royal blue</p>
+                    <span>Brand</span>
+                    
+                </div>
+                <div class="CP">
+                    <span>$120</span>
+                </div>
+            </div>
+            {% for i in context.Book1 %}
+                <div class="c3">
+                    <div class="sub-c1">
+                        <img src="{% static 'img/c1.png' %}" alt="">
+                    </div>
+                    <div class="sub-c2">
+                        <h1>{{Book1.Title}}</h1>
+                        <p>Quantity: 1 <br>Color: R</p>
+                        <span>p.</span>
+
+                    </div>
+                    <div class="CP">
+                        <span>{{Book1.Title}}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <div class="C-B-N">
+            <div class="B-N-S">
+                <P>Total Price for 4 Items</P>
+                <span>$600</span>
+            </div>
+            <div class="B-N-btn">
+                <span><a href="">Buy Now</a></span>
+            </div>
+        </div>
+    </section>
+<!----Script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+
+
+$('.fa-bars').click(function(){
+$(this).toggleClass('fa-times');
+$('.navbar').toggleClass('nav-toggle');
+});
+
+$(window).on('load scroll',function(){
+$('.fa-bars').removeClass('fa-times');
+$('.navbar').removeClass('nav-toggle');
+
+if($(window).scrollTop() > 30){
+$('.header').css({'background':'#fff','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
+}else{
+$('.header').css({'background':'none','box-shadow':'none'});
+}
+});
+
+
+$('.accordion-header').click(function(){
+$('.accordion .accordion-body').slideUp();
+$(this).next('.accordion-body').slideDown();
+$('.accordion .accordion-header span').text('+');
+$(this).children('span').text('-');
+});
+
+
+
+});
+    $('.main-slider .owl-carousel').owlCarousel({
+loop:true,
+autoplay:true,
+autoplayTimeout:3000,
+margin:10,
+responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:1
+    },
+    1000:{
+        items:1
+    }
+}
+})
+$('.B-S-c .owl-carousel').owlCarousel({
+loop:true,
+autoplay:true,
+autoplayTimeout:2000,
+margin:60,
+responsive:{
+    0:{
+        items:3
+    },
+    600:{
+        items:3
+    },
+    1000:{
+        items:3
+    }
+}
+})
+</script>
+</body>
+</html>

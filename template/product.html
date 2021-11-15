@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <section>
+        <header class="header">
+
+            <a href="{% url 'index' %}" class="logo">Shop</a>
+            
+            
+            <div class="fas fa-bars"></div>
+            
+            
+            <nav class="navbar">
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            </nav>
+            <div class="H-SRH"><input type="search" placeholder="Search..."> <a href=""><i class="fas fa-search"></i></a><a href="cart.html"><i class="fas fa-shopping-cart"></i></a><img src="img/Clint.jpg" alt=""></div>
+            
+        </header>
+        <div class="P1">
+            <div class="main-img">
+                <img src="{% static 'img/cr1.jpg' %}" class="pro-img" alt="">
+            </div>
+            
+        </div>
+        <div class="P2">
+        <div class="thumb-img">
+            <div class="box" onclick="changeImage(this)">
+                <img src="{% static 'img/cr1.jpg' %}" alt="">
+            </div>
+            <div class="box" onclick="changeImage(this)">
+                <img src="{% static 'img/cr2.jpg' %}" alt="">
+            </div>
+            <div class="box" onclick="changeImage(this)">
+                <img src="{% static 'img/cr3.jpg' %}" alt="">
+            </div>
+            <div class="box" onclick="changeImage(this)">
+                <img src="{% static 'img/cr4.jpg' %}" alt="">
+            </div>
+        </div>
+        </div>
+        <div class="PCQ">
+        <div class="PC">
+            <h1>Nashville Armchair</h1>
+            <span>$235</span>
+            
+            <p class="discription">A chair is a piece of furniture.
+                 It is used for sitting on and it can also be used for standing on, 
+                 if you can't reach something.
+            </p>
+        </div>
+        <div class="PQ">
+            <div class="QQQQQ">
+                <div>
+                <p class="PQQ">Quantity :</p>
+            </div>
+                    <div class="input-group quantity">
+                        <div class="input-group-prepend decrement-btn" style="cursor: pointer">
+                            <span class="input-group-text">-</span>
+                        </div>
+                        <input type="text" class="qty-input form-control"  value="1">
+                        
+                        <div class="input-group-append increment-btn" style="cursor: pointer">
+                            <span class="input-group-text">+</span>
+                        </div>
+                    </div>
+            </div>
+            <div>
+                <p class="is">In Stock: 300 Piece</p>
+            </div>
+            
+        </div>
+        </div>
+        <div class="product-footer">
+            <a href=""><i class="fas fa-cart-plus"></i> ADD TO CART</a>
+        </div>
+    </section>
+
+<!----Script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    $(document).ready(function(){
+
+
+$('.fa-bars').click(function(){
+$(this).toggleClass('fa-times');
+$('.navbar').toggleClass('nav-toggle');
+});
+
+$(window).on('load scroll',function(){
+$('.fa-bars').removeClass('fa-times');
+$('.navbar').removeClass('nav-toggle');
+
+if($(window).scrollTop() > 30){
+$('.header').css({'background':'#fff','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
+}else{
+$('.header').css({'background':'none','box-shadow':'none'});
+}
+});
+
+
+$('.accordion-header').click(function(){
+$('.accordion .accordion-body').slideUp();
+$(this).next('.accordion-body').slideDown();
+$('.accordion .accordion-header span').text('+');
+$(this).children('span').text('-');
+});
+
+
+
+});
+$(document).ready(function () {
+
+$('.increment-btn').click(function (e) {
+    e.preventDefault();
+    var incre_value = $(this).parents('.quantity').find('.qty-input').val();
+    var value = parseInt(incre_value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value<300){
+        value++;
+        $(this).parents('.quantity').find('.qty-input').val(value);
+    }
+
+});
+
+$('.decrement-btn').click(function (e) {
+    e.preventDefault();
+    var decre_value = $(this).parents('.quantity').find('.qty-input').val();
+    var value = parseInt(decre_value, 10);
+    value = isNaN(value) ? 0 : value;
+    if(value>1){
+        value--;
+        $(this).parents('.quantity').find('.qty-input').val(value);
+    }
+});
+
+});
+
+    $('.main-slider .owl-carousel').owlCarousel({
+loop:true,
+autoplay:true,
+autoplayTimeout:3000,
+margin:10,
+responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:1
+    },
+    1000:{
+        items:1
+    }
+}
+
+})
+$('.B-S-c .owl-carousel').owlCarousel({
+loop:true,
+autoplay:true,
+autoplayTimeout:2000,
+margin:60,
+responsive:{
+    0:{
+        items:3
+    },
+    600:{
+        items:3
+    },
+    1000:{
+        items:3
+    }
+}
+})
+
+    function changeImage(event){
+        document.querySelector(".pro-img").src=event.children[0].src
+    }
+</script>
+</body>
+</html>

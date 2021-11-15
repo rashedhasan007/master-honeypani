@@ -1,0 +1,996 @@
+*{
+    font-family: monospace;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:3rem 8rem;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 100;
+  }
+  
+  .header .logo{
+    text-decoration: none;
+    font-size:4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: monospace;
+    color:black;
+  }
+  
+  .header .navbar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .header .navbar ul li{
+    margin:0 1.5rem;
+  }
+  
+  .header .navbar ul li a{
+    font-size: 2.8rem;
+    color:#333;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: .5rem;
+  }
+  .header .navbar ul li a::after{
+      content:"";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: .3rem;
+      width: 0%;
+      background: black;
+      transition: .5s;
+
+  }
+  .header .navbar ul li a:hover:after{
+    width: 100%;
+  }
+  .header .navbar ul li a:hover{
+    color:salmon;
+  }
+  
+  .header .fa-bars{
+    color:black;
+    cursor: pointer;
+    font-size: 3rem;
+    display: none;
+  }
+  .H-SRH{
+    display: flex;
+    align-items: center;
+  }
+  .H-SRH input{
+    height: 5rem;
+    width: 30rem;
+    border-radius: 3rem;
+    outline: none;
+    border: none;
+    padding: .9rem;
+    background: rgb(230, 230, 230);
+  }
+  .H-SRH a{
+    color: black;
+  }
+  .H-SRH a:hover{
+    color: salmon;
+  }
+  .H-SRH .fa-search{
+    font-size: 2rem;
+    margin-left: -4rem;
+    padding: .8rem;
+    background: black;
+    color: #fff;
+    border-radius: 50%;
+  }
+  .H-SRH .fa-shopping-cart{
+    font-size: 2rem;
+    margin-left: 2rem;
+    padding: .7rem;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .H-SRH img{
+    margin-left: 2rem;
+    border: .2rem solid salmon;
+    height: 5rem ;
+    width: 5rem;
+    border-radius: 50%;
+  }
+
+
+
+
+
+.main-slider{
+   width: 90%;
+   padding: 1%;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow:0 0 2.5rem rgb(212, 232, 255);
+    border-radius: .5rem;
+    margin-bottom:3% ;
+    overflow: hidden;
+}
+.main-slider .item{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content:space-between;
+}
+.main-slider .msi{
+    height: 100%;
+    width:45%;
+    padding: 5% 0 0 5%;
+    text-align: justify;
+    
+}
+.msi1{
+    height: 100%;
+    width: 50%;
+    display: grid;
+    place-content: center;
+   overflow: hidden;
+}
+.msi1 img{
+    display: block;
+    margin: auto;
+    width: 80%;
+    object-fit: cover;
+}
+.main-slider .msi h1 span{
+    color: rgb(62, 62, 131);
+}
+.main-slider .msi h1{
+    font-size: 8rem;
+    font-family: monospace;
+}
+.main-slider .msi p{
+    font-family:sans-serif;
+    padding: 5% 0;
+    font-size: 2.2rem;
+    color: black;
+    line-height: 3rem;
+}
+.main-slider .msi a{
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: tomato;
+    border-bottom: 2px solid tomato;
+    padding-bottom: 5px;
+}
+/**********slider close*/
+
+.B-S-H{
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+.B-S-H h1{
+    font-size: 7rem;
+    font-family: monospace;
+    font-weight: bolder;
+}
+.B-S-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.B-S-c .card{
+    height: 45rem;
+    width: 35rem;
+    margin:4rem 3rem;
+    border-radius: .6rem;
+    box-shadow:0 0 2.5rem rgb(212, 232, 255);
+    position: relative;
+    
+}
+.B-S-c .card-s{
+    height:60% ;
+    width: 100%;
+    padding: 1%;
+    background: #fff;
+    background-size: contain;
+}
+.B-S-c .card-s img{
+    height:100%;
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+.card-s1{
+    height: 25%;
+    width: 100%;
+    padding: 2% 5%;
+}
+.card-s1 h1{
+    font-family:sans-serif;
+    font-size: 3.5rem;
+}
+
+.card-s1 p{
+    font-size:1.8rem;
+    font-family: sans-serif;
+    text-align: justify;
+    margin-bottom: .5rem;
+    padding: 2% 0;
+}
+.card-cart{
+    height: 15%;
+    padding-left: 5%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-cart span{
+    
+    font-size: 3.2rem;
+    font-weight: bolder;
+    color: darkblue;
+}
+.card-cart a{
+    display: block;
+    text-decoration: none;
+    font-size: 2.2rem;
+    padding: 1rem;
+    background: darkblue;
+    color: #fff;
+    border-radius: .6rem;
+}
+
+
+
+
+/**************************Cart*****************/
+.C1{
+    height: 5rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 11%;
+    margin-bottom: 5%;
+
+}
+.C1 span{
+    font-size: 6rem;
+    font-family: monospace;
+    font-weight: bolder;
+    border-bottom: .4rem solid tomato;
+}
+.C2{
+    height: auto;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30%;
+}
+.C2 .c3{
+    margin-top: 3%;
+    box-shadow: 0 0 2rem rgb(210, 235, 255);
+    border-radius: 1.5rem;
+    display: grid;
+    place-items: center;
+    display: flex;
+    padding: 1%;
+    position: relative;
+}
+.sub-c1{
+    height: 27rem;
+    width: 30%;
+    background:rgb(230, 230, 230);
+    border-radius: .6rem;
+    display: flex;
+    align-items: center;
+}
+.sub-c1 img{
+    height: 25rem;
+    display: block;
+    margin: auto;
+}
+.sub-c2{
+    height: 27rem;
+    width: 55%;
+    padding: 2%;
+    font-size: 2.5rem;
+    color: #333;
+}
+.sub-c2 p{
+    font-family: sans-serif;
+    margin:4% 0;
+}
+.sub-c2 span{
+    color: rgb(49, 49, 185);
+    font-size: 4rem;
+    font-weight: bolder;
+}
+.CP{
+    height: 24rem;
+    width: 15%;
+    display: flex;
+    color: rgb(54, 103, 228);
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: monospace;
+}
+.C-B-N{
+    height: 15rem;
+    width: 100%;
+    background: rgb(238, 244, 251);
+    display: flex;
+    border-radius: 2rem 2rem 0 0;
+    padding: 0 5%;
+    position: fixed;
+    bottom: 0;
+}
+.B-N-S{
+    height: 18rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.B-N-S p{
+    font-size: 2.5rem;
+    font-family: sans-serif;
+}
+.B-N-S span{
+    font-size:5rem;
+    font-family: monospace;
+    font-weight: 500;
+    color: rgb(54, 103, 228);
+}
+.B-N-btn{
+    height: 100%;
+    width: 50%;
+    display: grid;
+    place-items: center;
+}
+.B-N-btn a{
+    text-decoration: none;
+    font-size: 4rem;
+    padding: 2rem 8rem;
+    background: rgb(24, 96, 219);
+    box-shadow:inset 0 0 3rem rgb(101, 101, 230);
+    border-radius: .7rem;
+    color: #fff;
+    font-weight: 500;
+}
+.F{
+    height: 7rem;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: rgb(37, 36, 36);
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/********************************Products**********************************/
+.P1{
+    height: 50rem;
+    padding-top: 1rem;
+    width: 90%;
+    margin: auto;
+    box-shadow:0 0 2.5rem rgb(212, 232, 255);
+    margin-top:9%;
+    margin-bottom: 3%;
+    border-radius:.6rem ;
+
+}
+.P1 .main-img img{
+    width: 25rem;
+    margin: auto;
+    display: block;
+}
+
+.P2{
+    width: 90%;
+    height: 12rem;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+.thumb-img .box{
+    padding: .2rem;
+    display: inline-block;
+    height: 12rem;
+    width: 10rem;
+    box-shadow:0 0 2.5rem rgb(212, 232, 255);
+}
+.thumb-img .box img{
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.PCQ{
+    height: 40rem;
+    width: 100%;
+    display: flex;
+    padding: 0 5%;
+    margin-top: 5%;
+}
+.PC{
+    height: 40rem;
+    width: 50%;
+    
+}
+.PC h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.PC span{
+    font-size: 4rem;
+    color: blue;
+    
+}
+.PC .discription{
+    font-family: sans-serif;
+    color: #222;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.PQ{
+    height: 40rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 5%;
+}
+.input-group-text{
+    font-size: 3rem;
+    padding:0 .8rem ;
+    border-radius: .5rem;
+    box-shadow:inset 0 0 2.5rem rgb(209, 229, 255) ;
+    background: #E9EFF4;
+}
+.input-group{
+    display: flex;
+}
+.PQ .is{
+    margin-top: 1rem;
+    font-size: 3rem;
+}
+.PQQ{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+
+}
+.QQQQQ{
+    display: flex;
+    align-items: center;
+}
+.qty-input{
+    height: 4rem;
+    width: 4rem;
+    margin:0  1rem 0 1.5rem;
+    border: none;
+    font-size: 2.7rem;
+}
+.product-footer{
+    height: 10rem;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    background: rgb(0, 93, 255);
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+    
+    
+}
+.product-footer a{
+    font-size: 4rem;
+    color: white;
+    text-decoration: none;
+}
+/********************************Products End**********************************/
+@media screen and (max-width:1024px){
+    .B-S-c .card{
+        height:50rem;
+        width: 55rem;
+    }
+    .product-footer{
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        border-radius:15% 15% 50% 50% / 100% 100% 0% 0% ;
+        margin-bottom: 0;
+
+    }
+}
+
+@media screen and (max-width:823px){
+    .header .logo{
+        font-size: 2.5rem;
+    }
+    .header .navbar ul li a{
+        font-size: 1.7rem;
+    }
+    .c3{
+        height: 29rem;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    html{
+      font-size: 50%;
+    }
+  
+    .header .fa-bars{
+      display: block;
+    }
+    .header .logo{
+      display: none;
+    }
+    .header .navbar{
+      position: fixed;
+      top:-120%; left: 0;
+      height: auto;
+      width: 100%;
+      background-color: #fff;
+      z-index: 1000;
+      border-top: .1rem solid rgba(0,0,0,.3);
+    }
+  
+    .header .navbar ul{
+      height: 100%;
+      width: 100%;
+      flex-flow: column;
+    }
+  
+    .header .navbar ul li{
+      margin:1rem 0;
+    }
+  
+    .header .navbar ul li a{
+      color: #444;
+      font-size: 2.4rem;
+    }
+  
+    .header .fa-times{
+      transform: rotate(180deg);
+    }
+  
+    .header .nav-toggle{
+      top:10rem;
+    }
+    .main-slider{
+        height: 38rem;
+    }
+    .B-S-c .card{
+        width: 48rem;
+    }
+    
+}
+@media screen and (max-width:540px){
+    .main-slider{
+        margin-top: 15%;
+    }
+    .main-slider .owl-carousel .item .msi h1{
+        font-size: 5rem;
+    }
+    .main-slider .owl-carousel .item .msi1{
+        width: 50%;
+        height: 100%;
+    }
+    .main-slider .owl-carousel .item .msi1 img{
+        width: 100%;
+    }
+    .B-S-c .card{
+        height: 40rem;
+        width: 35rem;
+    }
+    .card .card-s1 h1{
+        font-size: 3rem;
+    }
+    .card .card-s1 p{
+        font-size: 1.8rem;
+        font-family: sans-serif;
+    }
+    .c3{
+        height: 18rem;
+    }
+    .c3 .sub-c1{
+        height: 17rem;
+    }
+    .c3 .sub-c1 img{
+        height: 100%;
+    }
+    .c3 .sub-c2{
+        padding:0 2%;
+        height: 100%;
+    }
+    .c3 .sub-c2 h1{
+        font-size: 3rem;
+    }
+    .c3 .sub-c2 span{
+        font-size: 3rem;
+    }
+    .CP{
+        height: 100%;
+    }
+    .P1{
+        margin-top: 15%;
+    }
+    .PC h1{
+        font-size: 3.5rem;
+    }
+    .PC .discription{
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    .PQ .is{
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width:415px){
+    .H-SRH input{
+        width: 22rem;
+    }
+    .main-slider{
+        height: 30rem;
+        margin-top: 22%;
+    }
+    .main-slider .item{
+        height: 25rem;
+    }
+    .main-slider .item h1{
+        font-size: 4rem;
+    }
+    .main-slider .item p{
+        font-size: 1.5rem;
+    }
+
+    .B-S-H h1{
+        font-size: 5rem;
+    }
+    .B-S-c .card{
+        height: 32rem;
+        width: 21rem;
+    }
+    .B-S-c .card .card-s1 h1{
+        font-size: 2rem;
+    }
+    .B-S-c .card .card-s1 p{
+        font-size: 1.2rem;
+    }
+    .C1{
+        margin-top: 20%;
+    }
+    .C2{
+        margin-top: 10%;
+        margin-bottom: 35%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .C2 .c3{
+        height: 18rem;
+        margin-top:5% ;
+    }
+    .sub-c1{
+        height: 17rem;
+        width: 30%;
+    }
+    .sub-c1 img{
+        height: 100%;
+
+    }
+    .c3 .sub-c2{
+        padding-top:2%;
+    }
+    .c3 .sub-c2 h1{
+        font-size: 2.2rem;
+    }
+    .sub-c2{
+        height: 18rem;
+    }
+    .sub-c2 p{
+        font-size: 1.5rem;
+    }
+    .sub-c2 span{
+        font-size: 3rem;
+    }
+    .c3 .CP {
+        padding-top: 2%;
+    }
+    .c3 .CP span{
+        
+        font-size: 2.5rem;
+    }
+    .C-B-N{
+        height: 12rem;
+    }
+    .C-B-N .B-N-S {
+        padding-bottom:10%;
+    }
+    .C-B-N .B-N-S p{
+        font-size:2.3rem ;
+        
+    }
+    .C-B-N .B-N-S span{
+        font-size: 4.5rem;
+    }
+    .B-N-btn span a{
+        font-size: 3rem;
+        padding: 1.5rem 4rem ;
+    }
+    .P1{
+        margin-top: 20%;
+    }
+    .P2{
+        height: 18rem;
+    }
+    .PC h1{
+        font-size: 2.5rem;
+    }
+    .PC span{
+        font-size: 2.5rem;
+    }
+    .PC .discription{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        color: #444;
+    }
+    .PQQ{
+        font-size: 1.8rem;
+    }
+    .PQ .is{
+        font-size: 1.8rem;
+    }
+    .input-group-text{
+        font-size: 2.5rem;
+    }
+    .qty-input{
+        margin: 0 0 0 1.5rem;
+        font-size: 2.2rem;
+    }
+    .product-footer{
+        width: 100%;
+    }
+    .F{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width:393px){
+    .PQQ{
+        font-size: 1.5rem;
+    }
+    .input-group-text{
+        font-size: 2.5rem;
+    }
+    .qty-input{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:320px){
+    .H-SRH input{
+        width: 18rem;
+        margin-left: 1rem;
+    }
+    .main-slider{
+        height: 25rem;
+        margin-top: 22%;
+        padding: 5% 1% 0 5%;
+    }
+    .main-slider .item{
+        height: 18rem;
+    }
+    .main-slider .item h1{
+        font-size: 2.5rem;
+    }
+    .main-slider .item p{
+        font-size: 1.1rem;
+        line-height: 10px;
+    }
+
+    .B-S-H h1{
+        font-size: 4rem;
+    }
+    .B-S-c .card{
+        height: 32rem;
+        width: 18rem;
+    }
+    .B-S-c .card .card-s1 h1{
+        font-size: 2rem;
+    }
+    .B-S-c .card .card-s1 p{
+        font-size: 1.2rem;
+    }
+    .C1{
+        margin-top: 20%;
+    }
+    .C2{
+        margin-top: 10%;
+        height: auto;
+        display: grid;
+        grid-gap: 0%;
+    }
+    .c3{
+        height: 23rem;
+    }
+    .sub-c1{
+        height: 21rem;
+        width: 40%;
+    }
+    .sub-c1 img{
+        height: 100%;
+
+    }
+    .sub-c2 h1{
+        font-size: 2.5rem;
+    }
+    .sub-c2{
+        height: 18rem;
+    }
+    .sub-c2 p{
+        font-size: 1.5rem;
+    }
+    .CP span{
+        font-size: 2.5rem;
+    }
+    .P1{
+        margin-top: 20%;
+    }
+    .P2{
+        height: 17rem;
+    }
+    .PC h1{
+        font-size: 2rem;
+    }
+    .PC span{
+        font-size: 2.5rem;
+    }
+    .PC .discription{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        color: #444;
+    }
+    .PQQ{
+        font-size: 1.5rem;
+    }
+    .PQ .is{
+        font-size: 1.6rem;
+    }
+    .product-footer{
+        width: 100%;
+    }
+    .F{
+        font-size: 1.2rem;
+    }
+}
+
+    @media screen and (max-width:280px){
+        .H-SRH input{
+            width: 18rem;
+            margin-left: 1rem;
+        }
+        .main-slider{
+            height: 25rem;
+            margin-top: 22%;
+            padding: 5% 1% 0 5%;
+        }
+        .main-slider .item{
+            height: 18rem;
+        }
+        .main-slider .item h1{
+            font-size: 2.5rem;
+        }
+        .main-slider .item p{
+            font-size: 1.1rem;
+            line-height: 10px;
+        }
+    
+        .B-S-H h1{
+            font-size: 3.8rem;
+        }
+        .B-S-c .card{
+            height: 35rem;
+            width: 40rem;
+        }
+        .B-S-c .card .card-s1 h1{
+            font-size: 2rem;
+        }
+        .B-S-c .card .card-s1 p{
+            font-size: 1.2rem;
+        }
+        .C1{
+            margin-top: 20%;
+        }
+        .C2{
+            margin-top: 10%;
+            height: auto;
+            display: grid;
+            grid-gap: 0%;
+        }
+        .c3{
+            height: 23rem;
+        }
+        .sub-c1{
+            height: 21rem;
+            width: 55%;
+            overflow: hidden;
+        }
+        .sub-c1 img{
+            height: 100%;
+    
+        }
+        .sub-c2 h1{
+            font-size: 2.5rem;
+        }
+        .sub-c2{
+            height: 18rem;
+        }
+        .sub-c2 p{
+            font-size: 1.5rem;
+        }
+        .CP span{
+            font-size: 2.5rem;
+        }
+        .C-B-N .B-N-btn{
+            font-size: .8rem;
+        }
+        .P1{
+            margin-top: 20%;
+        }
+        .P2{
+            height: 17rem;
+        }
+        .PC h1{
+            font-size: 2rem;
+        }
+        .PC span{
+            font-size: 2.5rem;
+        }
+        .PC .discription{
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            color: #444;
+        }
+        .PQQ{
+            font-size: 1.5rem;
+        }
+        .PQ .is{
+            font-size: 1.6rem;
+        }
+        .product-footer{
+            width: 100%;
+        }
+        .F{
+            font-size: 1rem;
+        }
+    }
