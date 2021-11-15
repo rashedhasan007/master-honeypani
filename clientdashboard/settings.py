@@ -26,9 +26,12 @@ SECRET_KEY = 'django-insecure-gpkl!1xw3id_sobelq214b85mvq1p=1yk*1uq6a(zgzg1zhpbz
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0'
-    'honeypani.herokuapp.com',
-    '127.0.0.1'
+   '*',
+   'https://honeypani.herokuapp.com/',
+   'http://honeypani.herokuapp.com/',
+   'honeypani.herokuapp.com',
+   'honeypani.herokuapp.com/',
+   '127.0.0.1',
 ]
 
 
