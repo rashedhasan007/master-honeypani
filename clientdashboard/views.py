@@ -12,11 +12,8 @@ def hello(request):
    return HttpResponse(text)
 
 def index(request):
-    from firebase import firebase
-    firebase = firebase.FirebaseApplication('https://honeypani-360ce-default-rtdb.firebaseio.com/', None)
-    result = firebase.get('batters', '')
-    print(result)
-    return render(request,'index.html',result)
+   
+    return render(request,'index.html')
 def product(request):
    time_series_json="my name is rashed"
    context={}
