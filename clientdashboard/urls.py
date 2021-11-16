@@ -20,8 +20,9 @@ from .views import index,product,cart,myindex
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^$',index,name='index'),
-    url('product/',product,name='product'),
+    #url('product/',product,name='product'),
     url('cart/',cart,name='cart'),
     path('myindex/<my_id>/',myindex, name='myindex'),
+    path('product/<my_product>/',product, name='product'),
 
 ]
