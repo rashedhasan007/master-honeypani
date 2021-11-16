@@ -14,11 +14,15 @@ def hello(request):
 def index(request):
    
     return render(request,'index.html')
-def product(request):
-   time_series_json="my name is rashed"
-   context={}
-   context['Shop_name']="hey welcome to my store"
-   return render(request,'product-detail.html',context)
+def product(request,my_product):
+    time_series_json="my name is rashed"
+    docs = db.collection('Product').where('productname', '==', my_product).stream()
+    for doc in docs:
+        print(doc.to_dict())
+        run=doc.to_dict()
+
+
+    return render(request,'product-detail.html',run)
 def cart(request):
 
     b = """{u'1': u'xxxxx', u'2': u'yyyyy'}"""
