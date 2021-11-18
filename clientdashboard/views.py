@@ -26,12 +26,18 @@ def index(request):
 def product(request,my_product):
     time_series_json="my name is rashed"
     docs = db.collection('Product').where('productname', '==', my_product).stream()
-    for doc in docs:
+    firstimg=[]
+    for doc1 in  docs:
+        firstimg.append(doc1.to_dict())
+    docs1 = db.collection('Product').stream()
+    total=[]
+    for doc in docs1:
         print(doc.to_dict())
-        run=doc.to_dict()
+        total.append(doc.to_dict())
+    dic={'product':total,'img':firstimg[0]}
 
 
-    return render(request,'product-detail.html',run)
+    return render(request,'product-detail.html',dic)
 def cart(request):
 
     b = """{u'1': u'xxxxx', u'2': u'yyyyy'}"""
